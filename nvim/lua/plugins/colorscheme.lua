@@ -1,13 +1,14 @@
-vim.g.material_style = "palenight"
-
 return {
   {
-    "marko-cerovac/material.nvim",
+    "navarasu/onedark.nvim",
+    opts = {
+      style = "deep",
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material",
+      colorscheme = "onedark",
     },
   },
 }

@@ -6,3 +6,4 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
+keymap.set({ "n", "v" }, "<C-.>", vim.lsp.buf.code_action, opts)
