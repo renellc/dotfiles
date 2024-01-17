@@ -16,12 +16,16 @@ vim.g.mapleader = " "
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 999
 
 -- Fold settings
 vim.opt.foldcolumn = "0"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
+
+-- Plugin specific settings
+vim.g.skip_ts_context_commentstring_module = true
 
 require("lazy").setup("plugins")
 
@@ -36,6 +40,13 @@ require("which-key").register({
 			end,
 			"List All References",
 		},
+	},
+	c = {
+		a = { vim.lsp.buf.code_action, "Code Action" },
+	},
+	d = {
+		n = { vim.diagnostic.goto_next, "Goto Next Diagnostic" },
+		p = { vim.diagnostic.goto_prev, "Goto Next Diagnostic" },
 	},
 }, { prefix = "<leader>" })
 

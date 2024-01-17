@@ -41,5 +41,12 @@ config.keys = {
 	},
 }
 
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = "8px",
+	bottom = "8px",
+}
+
 -- and finally, return the configuration to wezterm
 return config

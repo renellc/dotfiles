@@ -81,6 +81,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"L3MON4D3/LuaSnip",
+			"hrsh7th/cmp-path",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -93,6 +94,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+					{ name = "path" },
 				}, { name = "buffer" }),
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.select_next_item(),
