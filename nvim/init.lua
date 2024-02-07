@@ -32,7 +32,7 @@ require("lazy").setup("plugins")
 -- Keymaps
 require("which-key").register({
 	g = {
-		d = { vim.lsp.buf.definition, "Jump To Definition" },
+		d = { require("telescope.builtin").lsp_definitions, "Jump To Definition" },
 		r = { require("telescope.builtin").lsp_references, "List All References" },
 		e = {
 			function()
