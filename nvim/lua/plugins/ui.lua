@@ -1,7 +1,7 @@
 return {
 	{
 		"stevearc/dressing.nvim",
-		opts = {},
+		event = "VeryLazy",
 	},
 	{
 		"utilyre/barbecue.nvim",
@@ -29,12 +29,6 @@ return {
 					require("barbecue.ui").update()
 				end,
 			})
-		end,
-	},
-	{
-		"petertriho/nvim-scrollbar",
-		config = function()
-			require("scrollbar").setup({})
 		end,
 	},
 }
