@@ -146,3 +146,4 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 alias lg="lazygit"
+eval "$(zoxide init zsh)"
