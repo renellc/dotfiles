@@ -31,8 +31,11 @@ return {
 					o = { "<cmd>Telescope oldfiles<CR>", "Show Recent Files" },
 					b = { "<cmd>Telescope buffers sort_mru=true<CR>", "Show Open Buffers" },
 					m = { "<cmd>Telescope marks<CR>", "Show Marks" },
-					e = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", "Open File Browser" },
-					E = { "<cmd>Telescope file_browser<CR>", "Open File Browser" },
+					e = {
+						"<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>",
+						"Open File Browser",
+					},
+					E = { "<cmd>Telescope file_browser hidden=true<CR>", "Open File Browser" },
 					d = { "<cmd>Telescope diagnostics<CR>", "Show Diagnostics" },
 				},
 			}, { prefix = "<leader>" })

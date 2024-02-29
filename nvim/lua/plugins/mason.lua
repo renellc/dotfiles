@@ -19,6 +19,7 @@ return {
 					"graphql",
 					"html",
 					"jsonls",
+					"ocamllsp",
 					"tsserver",
 					"lua_ls",
 					"pyright",
