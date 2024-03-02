@@ -1,6 +1,8 @@
 return {
 	{
 		"echasnovski/mini.indentscope",
+		lazy = true,
+		event = { "BufNewFile", "BufReadPre", "BufReadPost" },
 		version = false,
 		config = function()
 			require("mini.indentscope").setup({})
@@ -8,6 +10,7 @@ return {
 	},
 	{
 		"echasnovski/mini.pairs",
+		event = "InsertEnter",
 		version = false,
 		config = function()
 			require("mini.pairs").setup({})
