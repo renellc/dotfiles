@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- General vim settings
 vim.g.mapleader = " "
+vim.opt.mouse = "a"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -47,6 +48,9 @@ require("which-key").register({
 	d = {
 		n = { vim.diagnostic.goto_next, "Goto Next Diagnostic" },
 		p = { vim.diagnostic.goto_prev, "Goto Next Diagnostic" },
+	},
+	h = {
+		s = { require("telescope.builtin").help_tags, "Search Help" },
 	},
 }, { prefix = "<leader>" })
 
