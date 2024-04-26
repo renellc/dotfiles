@@ -28,6 +28,11 @@ vim.opt.foldenable = true
 -- Plugin specific settings
 vim.g.skip_ts_context_commentstring_module = true
 
+-- Tab/Space settings
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+
 require("lazy").setup("plugins")
 
 -- Keymaps
