@@ -17,18 +17,29 @@ return {
 	-- 		vim.cmd("colorscheme rose-pine-moon")
 	-- 	end,
 	-- },
+	-- {
+	-- 	"sainnhe/sonokai",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {
+	-- 		theme = "sonokai",
+	-- 	},
+	-- 	config = function()
+	-- 		vim.opt.termguicolors = true
+	-- 		vim.cmd([[let g:sonokai_style = "atlantis"]])
+	-- 		vim.cmd([[let g:sonokai_better_performance = 1]])
+	-- 		vim.cmd([[colorscheme sonokai]])
+	-- 	end,
+	-- },
 	{
-		"sainnhe/sonokai",
+		"sainnhe/gruvbox-material",
 		lazy = false,
 		priority = 1000,
-		opts = {
-			theme = "sonokai",
-		},
 		config = function()
 			vim.opt.termguicolors = true
-			vim.cmd([[let g:sonokai_style = "atlantis"]])
-			vim.cmd([[let g:sonokai_better_performance = 1]])
-			vim.cmd([[colorscheme sonokai]])
+			vim.cmd([[let g:gruvbox_material_background = "medium"]])
+			vim.cmd([[let g:gruvbox_material_better_performance = 1]])
+			vim.cmd([[colorscheme gruvbox-material]])
 		end,
 	},
 }

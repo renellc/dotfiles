@@ -49,6 +49,10 @@ require("which-key").register({
 	},
 	c = {
 		a = { vim.lsp.buf.code_action, "Code Action" },
+		b = {
+			c = { '"*y', "Copy To Clipboard", mode = "v" },
+			v = { '"*p', "Paste From Clipboard" }
+		},
 	},
 	d = {
 		n = { vim.diagnostic.goto_next, "Goto Next Diagnostic" },
