@@ -12,33 +12,47 @@ end
 
 -- This is where you actually apply your config choices
 
-config.color_scheme = "One Dark (Gogh)"
+config.color_scheme = "Gruvbox Material (Gogh)"
 
 config.font = wezterm.font("JetBrains Mono")
+config.font_size = 15.0
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.keys = {
 	{
-		key = "F5",
-		mods = "CTRL",
-		action = wezterm.action.SplitHorizontal({
-			domain = "CurrentPaneDomain",
-		}),
-	},
-	{
 		key = "F6",
-		mods = "CTRL",
 		action = wezterm.action.SplitVertical({
 			domain = "CurrentPaneDomain",
 		}),
 	},
 	{
+		key = "F5",
+		action = wezterm.action.SplitHorizontal({
+			domain = "CurrentPaneDomain",
+		}),
+	},
+	{
 		key = "w",
-		mods = "CTRL",
+		mods = "SUPER",
 		action = wezterm.action.CloseCurrentPane({
 			confirm = true,
 		}),
 	},
+	{
+		key = "+",
+		mods = "CTRL",
+		action = wezterm.action.IncreaseFontSize,
+	},
+	{
+		key = "-",
+		mods = "CTRL",
+		action = wezterm.action.DecreaseFontSize,
+	},
+	{
+		key = "0",
+		mods = "CTRL",
+		action = wezterm.action.ResetFontSize,
+	}
 }
 
 config.window_padding = {
