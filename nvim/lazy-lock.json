@@ -1,6 +1,10 @@
 {
   "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
+  "conform.nvim": { "branch": "master", "commit": "62eba813b7501b39612146cbf29cd07f1d4ac29c" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "482350b050bd413931c2cdd4857443c3da7d57cb" },
+  "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
+  "nvim-lspconfig": { "branch": "master", "commit": "b21c166bbf337734f2a39734a905c1c3e298205c" },
   "nvim-treesitter": { "branch": "master", "commit": "0b8b78f9d08dc338a146eb4cd4bcbed8dd36a783" },
   "plenary.nvim": { "branch": "master", "commit": "ec289423a1693aeae6cd0d503bac2856af74edaa" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "a46780830b576049c675680650f773bedfa8677a" },
