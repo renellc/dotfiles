@@ -29,4 +29,23 @@ return {
 			require("telescope").load_extension("file_browser")
 		end,
 	},
+	{ 
+		'nvim-telescope/telescope-fzf-native.nvim',
+		build = 'make',
+		config = function()
+			require("telescope").load_extension("fzf")
+		end,
+	},
+	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		config = function()
+			require("telescope").load_extension("ui-select")
+		end,
+	},
+	{
+		"nvim-telescope/telescope-frecency.nvim",
+		config = function()
+			require("telescope").load_extension("frecency")
+		end,
+	},
 }

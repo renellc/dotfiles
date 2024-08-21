@@ -10,3 +10,4 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set("n", "<leader>fE", ":Telescope file_browser<CR>")
 vim.keymap.set("n", "<space>fe", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 
+vim.keymap.set("n", "<leader>fr", ":Telescope frecency workspace=CWD<CR>")
