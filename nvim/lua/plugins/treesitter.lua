@@ -13,6 +13,7 @@ return {
 					enable = true,
 				},
 				ensure_installed = {
+					"gdscript",
 					"lua",
 				},
 				ignore_install = {},
