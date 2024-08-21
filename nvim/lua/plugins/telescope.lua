@@ -2,8 +2,9 @@
 return {
 	{
 
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		dependencies = { 'nvim-lua/plenary.nvim' },
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("telescope").setup({
 				defaults = {
@@ -12,7 +13,7 @@ return {
 					selection_strategy = "follow",
 					layout_strategy = "center",
 					path_display = {
-						truncate = 3
+						truncate = 3,
 					},
 					prompt_title = "Query",
 				},
@@ -29,9 +30,9 @@ return {
 			require("telescope").load_extension("file_browser")
 		end,
 	},
-	{ 
-		'nvim-telescope/telescope-fzf-native.nvim',
-		build = 'make',
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make",
 		config = function()
 			require("telescope").load_extension("fzf")
 		end,
