@@ -41,6 +41,8 @@ return {
 					})
 				end,
 			})
+
+			require("lspconfig").gdscript.setup({})
 		end,
 	},
 }
