@@ -7,14 +7,14 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
-					theme = "center",
 					dynamic_preview_title = true,
 					sorting_strategy = "ascending",
-					layout_config = {
-						horizontal = {
-							prompt_position = "top",
-						},
+					selection_strategy = "follow",
+					layout_strategy = "center",
+					path_display = {
+						truncate = 3
 					},
+					prompt_title = "Query",
 				},
 				extensions = {
 					hijack_netrw = true,
