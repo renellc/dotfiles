@@ -15,7 +15,18 @@ return {
 			mason_lspconfig.setup({
 				automatic_installation = true,
 				ensure_installed = {
+					"biome",
+					"cssls",
+					"dockerls",
+					"docker_compose_language_service",
+					"emmet_language_server",
+					"eslint",
+					"html",
+					"jsonls",
 					"lua_ls",
+					"tailwindcss",
+					"tsserver",
+					"yamlls",
 				},
 			})
 

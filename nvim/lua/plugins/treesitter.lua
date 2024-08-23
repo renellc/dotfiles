@@ -13,8 +13,16 @@ return {
 					enable = true,
 				},
 				ensure_installed = {
+					"css",
+					"dockerfile",
 					"gdscript",
+					"html",
+					"javascript",
+					"json",
 					"lua",
+					"toml",
+					"typescript",
+					"yaml",
 				},
 				ignore_install = {},
 			})
