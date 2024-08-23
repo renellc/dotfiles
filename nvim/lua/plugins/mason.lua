@@ -24,6 +24,7 @@ return {
 					"html",
 					"jsonls",
 					"lua_ls",
+					"ruff",
 					"tailwindcss",
 					"tsserver",
 					"yamlls",

@@ -20,6 +20,7 @@ return {
 					"javascript",
 					"json",
 					"lua",
+					"python",
 					"toml",
 					"typescript",
 					"yaml",
