@@ -1,19 +1,20 @@
 return {
 	"stevearc/conform.nvim",
+	event = "VeryLazy",
 	config = function()
 		require("conform").setup({
-			formatters_by_ft = {
-				lua = { "stylua" },
+			format_on_save = {
+				timeout_ms = 1000,
+				lsp_fallback = true,
 			},
-		})
-
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*",
-			callback = function(args)
-				require("conform").format({
-					bufnr = args.buf,
-				})
-			end,
+			formatters_by_ft = {
+				javascript = { "biome", "prettierd", "prettier" },
+				javascriptreact = { "biome", "prettierd", "prettier" },
+				lua = { "stylua" },
+				python = { "ruff_format" },
+				typescript = { "biome", "prettierd", "prettier" },
+				typescriptreact = { "biome", "prettierd", "prettier" },
+			},
 		})
 	end,
 }

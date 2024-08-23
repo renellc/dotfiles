@@ -24,6 +24,7 @@ return {
 					"html",
 					"jsonls",
 					"lua_ls",
+					"pyright",
 					"ruff",
 					"tailwindcss",
 					"tsserver",
@@ -33,7 +34,10 @@ return {
 
 			mason_lspconfig.setup_handlers({
 				function(server_name)
-					require("lspconfig")[server_name].setup({})
+					local capabilities = require("cmp_nvim_lsp").default_capabilities()
+					require("lspconfig")[server_name].setup({
+						capabilities = capabilities,
+					})
 				end,
 				["lua_ls"] = function()
 					require("lspconfig").lua_ls.setup({
@@ -47,6 +51,45 @@ return {
 								},
 								workspace = {
 									library = vim.api.nvim_get_runtime_file("", true),
+								},
+							},
+						},
+					})
+				end,
+				["biome"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.biome.setup({})
+				end,
+				["ruff"] = function()
+					require("lspconfig").ruff.setup({})
+
+					vim.api.nvim_create_autocmd("LspAttach", {
+						group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
+						callback = function(args)
+							local client = vim.lsp.get_client_by_id(args.data.client_id)
+							if client == nil then
+								return
+							end
+							if client.name == "ruff" then
+								-- Disable hover in favor of Pyright
+								client.server_capabilities.hoverProvider = false
+							end
+						end,
+						desc = "LSP: Disable hover capability from Ruff",
+					})
+				end,
+				["pyright"] = function()
+					require("lspconfig").pyright.setup({
+
+						settings = {
+							pyright = {
+								-- Using Ruff's import organizer
+								disableOrganizeImports = true,
+							},
+							python = {
+								analysis = {
+									-- Ignore all files for analysis to exclusively use Ruff for linting
+									ignore = { "*" },
 								},
 							},
 						},
