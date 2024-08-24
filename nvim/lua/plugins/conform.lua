@@ -11,7 +11,7 @@ return {
 				javascript = { "biome", "prettierd", "prettier" },
 				javascriptreact = { "biome", "prettierd", "prettier" },
 				lua = { "stylua" },
-				python = { "ruff_format" },
+				python = { "ruff_fix", "ruff_format" },
 				typescript = { "biome", "prettierd", "prettier" },
 				typescriptreact = { "biome", "prettierd", "prettier" },
 			},
