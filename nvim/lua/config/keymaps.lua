@@ -1,10 +1,27 @@
 -- Telescope
+local extensions = require("telescope").extensions
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>ff", function()
+	builtin.find_files({
+		hidden = true,
+	})
+end, {})
 vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
-vim.keymap.set("n", "<leader>fE", ":Telescope file_browser<CR>")
-vim.keymap.set("n", "<space>fe", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set("n", "<leader>fE", function()
+	extensions.file_browser.file_browser({
+		hidden = true,
+	})
+end, {})
+
+vim.keymap.set("n", "<space>fe", function()
+	extensions.file_browser.file_browser({
+		hidden = true,
+		select_buffer = true,
+		path = "%:p:h",
+	})
+end, {})
+-- vim.keymap.set("n", "<space>fe", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")

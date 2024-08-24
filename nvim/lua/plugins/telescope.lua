@@ -18,7 +18,10 @@ return {
 					prompt_title = "Query",
 				},
 				extensions = {
-					hijack_netrw = true,
+					file_browser = {
+						grouped = true,
+						hijack_netrw = true,
+					},
 				},
 			})
 		end,
