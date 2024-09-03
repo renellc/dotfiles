@@ -12,6 +12,7 @@ return {
 				javascriptreact = { "biome", "prettierd", "prettier" },
 				lua = { "stylua" },
 				python = { "ruff_fix", "ruff_format" },
+				sql = { "sql_formatter" },
 				typescript = { "biome", "prettierd", "prettier" },
 				typescriptreact = { "biome", "prettierd", "prettier" },
 			},

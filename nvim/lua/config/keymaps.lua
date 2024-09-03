@@ -1,3 +1,8 @@
+-- General
+vim.keymap.set("n", "<leader>ca", function()
+	vim.lsp.buf.code_action()
+end, {})
+
 -- Telescope
 local extensions = require("telescope").extensions
 local builtin = require("telescope.builtin")
@@ -24,4 +29,3 @@ vim.keymap.set("n", "<space>fe", function()
 		path = "%:p:h",
 	})
 end, {})
--- vim.keymap.set("n", "<space>fe", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
