@@ -1,6 +1,7 @@
 return {
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
@@ -10,6 +11,7 @@ return {
 	},
 	{
 		"utilyre/barbecue.nvim",
+		event = "VeryLazy",
 		name = "barbecue",
 		version = "*",
 		dependencies = {
@@ -20,20 +22,6 @@ return {
 	{
 		"echasnovski/mini.notify",
 		version = "*",
-	},
-	{
-		"kevinhwang91/nvim-ufo",
-		event = "VeryLazy",
-		dependencies = {
-			"kevinhwang91/promise-async",
-		},
-		config = function()
-			require("ufo").setup({
-				provider_selector = function(bufnr, filetype, buftype)
-					return { "treesitter", "indent" }
-				end,
-			})
-		end,
 	},
 	{
 		"folke/noice.nvim",
