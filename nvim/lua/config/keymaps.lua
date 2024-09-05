@@ -3,6 +3,7 @@ vim.keymap.set("n", "<leader>ca", function()
 	vim.lsp.buf.code_action()
 end, {})
 vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 
 -- Telescope
 local extensions = require("telescope").extensions
