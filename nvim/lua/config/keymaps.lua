@@ -5,6 +5,8 @@ end, {})
 vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- Telescope
 local extensions = require("telescope").extensions
 local builtin = require("telescope.builtin")

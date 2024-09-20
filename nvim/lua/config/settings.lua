@@ -1,7 +1,10 @@
 -- General
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes"
+vim.opt.mouse = 'a'
+vim.opt.updatetime = 250
+vim.opt.scrolloff = 10
 
 -- Tab/Space
 vim.opt.tabstop = 2
