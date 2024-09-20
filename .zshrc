@@ -148,3 +148,11 @@ load-nvmrc
 alias lg="lazygit"
 eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Created by `pipx` on 2024-08-23 12:58:53
+export PATH="$PATH:/Users/renellc/.local/bin"

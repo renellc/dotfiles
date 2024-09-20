@@ -1,19 +1,21 @@
+-- plugins/telescope.lua:
 return {
 	{
+
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
+		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("telescope").setup({
 				defaults = {
-					theme = "center",
 					dynamic_preview_title = true,
 					sorting_strategy = "ascending",
-					layout_config = {
-						horizontal = {
-							prompt_position = "top",
-						},
+					selection_strategy = "follow",
+					layout_strategy = "center",
+					path_display = {
+						truncate = 3,
 					},
+					prompt_title = "Query",
 				},
 				extensions = {
 					file_browser = {
@@ -22,23 +24,6 @@ return {
 					},
 				},
 			})
-
-			require("which-key").register({
-				f = {
-					f = { "<cmd>Telescope find_files<CR>", "Find File" },
-					s = { "<cmd>Telescope live_grep<CR>", "Search Files" },
-					S = { "<cmd>Telescope resume<CR>", "Search Files With Previous Query" },
-					o = { "<cmd>Telescope oldfiles<CR>", "Show Recent Files" },
-					b = { "<cmd>Telescope buffers sort_mru=true<CR>", "Show Open Buffers" },
-					m = { "<cmd>Telescope marks<CR>", "Show Marks" },
-					e = {
-						"<cmd>Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>",
-						"Open File Browser",
-					},
-					E = { "<cmd>Telescope file_browser hidden=true<CR>", "Open File Browser" },
-					d = { "<cmd>Telescope diagnostics<CR>", "Show Diagnostics" },
-				},
-			}, { prefix = "<leader>" })
 		end,
 	},
 	{
@@ -53,6 +38,12 @@ return {
 		build = "make",
 		config = function()
 			require("telescope").load_extension("fzf")
+		end,
+	},
+	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		config = function()
+			require("telescope").load_extension("ui-select")
 		end,
 	},
 }
