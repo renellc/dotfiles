@@ -12,21 +12,23 @@ end
 
 -- This is where you actually apply your config choices
 
-config.color_scheme = "Gruvbox Material (Gogh)"
+config.color_scheme = "catppuccin-mocha"
 
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 15.0
+config.font_size = 14.0
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.keys = {
 	{
-		key = "F6",
+		key = "d",
+		mods = "SUPER|SHIFT",
 		action = wezterm.action.SplitVertical({
 			domain = "CurrentPaneDomain",
 		}),
 	},
 	{
-		key = "F5",
+		key = "d",
+		mods = "SUPER",
 		action = wezterm.action.SplitHorizontal({
 			domain = "CurrentPaneDomain",
 		}),
