@@ -91,7 +91,23 @@ return {
 				end,
 				["biome"] = function()
 					local lspconfig = require("lspconfig")
-					lspconfig.biome.setup({})
+					lspconfig.biome.setup({
+						cmd = { "biome", "lsp-proxy" },
+						filetypes = {
+							'astro',
+							'css',
+							'graphql',
+							'javascript',
+							'javascriptreact',
+							'json',
+							'jsonc',
+							'svelte',
+							'typescript',
+							'typescript.tsx',
+							'typescriptreact',
+							'vue',
+						},
+					})
 				end,
 				["ruff"] = function()
 					require("lspconfig").ruff.setup({})
@@ -139,13 +155,17 @@ return {
 					lsp_fallback = true,
 				},
 				formatters_by_ft = {
-					javascript = { "biome", "prettierd", "prettier" },
-					javascriptreact = { "biome", "prettierd", "prettier" },
+					javascript = { "biome" },
+					javascriptreact = { "biome" },
+					-- javascript = { "prettierd", "prettier" },
+					-- javascriptreact = { "prettierd", "prettier" },
 					lua = { "stylua" },
 					python = { "ruff_fix", "ruff_format" },
 					sql = { "sql_formatter" },
-					typescript = { "biome", "prettierd", "prettier" },
-					typescriptreact = { "biome", "prettierd", "prettier" },
+					typescript = { "biome" },
+					typescriptreact = { "biome" },
+					-- typescript = { "prettierd", "prettier" },
+					-- typescriptreact = { "prettierd", "prettier" },
 				},
 			})
 		end,

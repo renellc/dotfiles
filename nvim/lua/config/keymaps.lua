@@ -1,3 +1,6 @@
+local extensions = require("telescope").extensions
+local builtin = require("telescope.builtin")
+
 -- General
 vim.keymap.set("n", "<leader>ca", function()
 	vim.lsp.buf.code_action()
@@ -9,9 +12,11 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+vim.keymap.set("n", "<leader>gr", function()
+	builtin.lsp_references()
+end)
+
 -- Telescope
-local extensions = require("telescope").extensions
-local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>ff", function()
 	builtin.find_files({
