@@ -22,6 +22,7 @@ return {
 	},
 	{
 		'nvim-telescope/telescope-file-browser.nvim',
+		lazy = true,
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'nvim-telescope/telescope.nvim',
@@ -30,4 +31,11 @@ return {
 			require('telescope').load_extension('file_browser')
 		end,
 	},
+	{
+		'nvim-telescope/telescope-ui-select.nvim',
+		lazy = true,
+		config = function()
+			require('telescope').load_extension('ui-select')
+		end,
+	}
 }
