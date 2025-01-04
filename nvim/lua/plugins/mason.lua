@@ -27,7 +27,7 @@ return {
 					"jsonls",
 					"lua_ls",
 					"tailwindcss",
-					"vtsls",
+					"ts_ls",
 					"yamlls",
 				},
 			})
@@ -37,6 +37,20 @@ return {
 					local capabilities = vim.lsp.protocol.make_client_capabilities()
 					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
+					})
+				end,
+				["lua_ls"] = function()
+					require("lspconfig").lua_ls.setup({
+						settings = {
+							Lua = {
+								diagnostics = {
+									globals = { "vim", "require" },
+								},
+								workspace = {
+									library = vim.api.nvim_get_runtime_file("", true)
+								},
+							},
+						},
 					})
 				end,
 			})

@@ -28,6 +28,7 @@ return {
 					"scss",
 					"sql",
 					"tsv",
+					"tsx",
 					"typescript",
 					"vim",
 					"vimdoc",
