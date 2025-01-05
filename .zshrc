@@ -156,3 +156,6 @@ eval "$(pyenv init -)"
 
 # Created by `pipx` on 2024-08-23 12:58:53
 export PATH="$PATH:/Users/renellc/.local/bin"
+
+# bun completions
+[ -s "/opt/homebrew/Cellar/bun/1.1.29/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.1.29/share/zsh/site-functions/_bun"
