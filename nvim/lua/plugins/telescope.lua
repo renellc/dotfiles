@@ -25,10 +25,12 @@ return {
 			local wk = require('which-key')
 
 			wk.add({
-				{ '<leader>ff', builtin.find_files, desc = 'Find files', mode = 'n' },
-				{ '<leader>fm', builtin.marks, desc = 'Find marks', mode = 'n' },
-				{ '<leader>fs', builtin.live_grep, desc = 'Search files', mode = 'n' },
-				{ '<leader>fb', function() builtin.buffers({ sort_mru = true }) end, desc = 'Find open buffers', mode = 'n' },
+				{ '<leader>ff',  builtin.find_files,                                  desc = 'Find file(s)',        mode = 'n' },
+				{ '<leader>fm',  builtin.marks,                                       desc = 'Find mark(s)',        mode = 'n' },
+				{ '<leader>fs',  builtin.live_grep,                                   desc = 'Search files',        mode = 'n' },
+				{ '<leader>fb',  function() builtin.buffers({ sort_mru = true }) end, desc = 'Find open buffers',   mode = 'n' },
+				{ '<leader>fd',  builtin.diagnostics,                                 desc = 'Find diagnostic(s)',  mode = 'n' },
+				{ '<leader>gbc', builtin.git_bcommits,                                desc = 'List buffer commits', mode = 'n' },
 			})
 		end,
 	},
