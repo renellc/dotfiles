@@ -6,21 +6,28 @@ return {
 			'nvim-lua/plenary.nvim',
 			'folke/which-key.nvim',
 		},
-		opts = {
-			defaults = {
-				dynamic_preview_title = true,
-				sorting_strategy = 'ascending',
-				selection_strategy = 'follow',
-				prompt_title = 'Query'
-
-			},
-			extensions = {
-				file_browser = {
-					hijack_netrw = true,
-				},
-			},
-		},
 		config = function()
+			require('telescope').setup({
+				defaults = {
+					dynamic_preview_title = true,
+					sorting_strategy = 'ascending',
+					selection_strategy = 'follow',
+					layout_config = {
+						horizontal = {
+							prompt_position = "top",
+						},
+					},
+					prompt_title = 'Query',
+
+				},
+				extensions = {
+					file_browser = {
+						hijack_netrw = true,
+						grouped = true,
+					},
+				},
+			})
+
 			local builtin = require('telescope.builtin')
 			local wk = require('which-key')
 
