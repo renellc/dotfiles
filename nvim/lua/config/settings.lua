@@ -1,18 +1,23 @@
 -- General
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "yes"
 vim.opt.mouse = 'a'
 vim.opt.updatetime = 250
 vim.opt.scrolloff = 10
 
--- Tab/Space
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+-- Line number
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
 
--- ufo
-vim.o.foldcolumn = "0"
-vim.o.foldlevel = 99
+-- Colorscheme
+vim.cmd.colorscheme("catppuccin")
+
+-- Folds
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+-- Tab
+vim.o.smartindent = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2

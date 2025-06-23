@@ -156,3 +156,14 @@ eval "$(pyenv init -)"
 
 # Created by `pipx` on 2024-08-23 12:58:53
 export PATH="$PATH:/Users/renellc/.local/bin"
+
+export PATH="$PATH:/opt/homebrew/opt"
+
+# bun completions
+[ -s "/opt/homebrew/Cellar/bun/1.1.29/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.1.29/share/zsh/site-functions/_bun"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/renellc/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
