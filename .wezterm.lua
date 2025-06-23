@@ -18,6 +18,8 @@ config.font = wezterm.font("JetBrains Mono")
 config.font_size = 14.0
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
+config.max_fps = 165
+
 config.keys = {
 	{
 		key = "d",
