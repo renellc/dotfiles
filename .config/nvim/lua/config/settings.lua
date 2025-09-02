@@ -1,4 +1,4 @@
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 vim.opt.updatetime = 250
 vim.opt.scrolloff = 10
 
