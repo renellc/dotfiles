@@ -1,3 +1,5 @@
+local js_ts_formatters = { "biome", "biome-organize-imports", "eslint_d", "eslint", stop_after_first = true }
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -9,10 +11,10 @@ return {
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
-			javascript = { "biome", "biome-organize-imports", "prettierd", "prettier", stop_after_first = true },
-			javascriptreact = { "biome", "biome-organize-imports", "prettierd", "prettier", stop_after_first = true },
-			typescript = { "biome", "biome-organize-imports", "prettierd", "prettier", stop_after_first = true },
-			typescriptreact = { "biome", "biome-organize-imports", "prettierd", "prettier", stop_after_first = true },
+			javascript = js_ts_formatters,
+			javascriptreact = js_ts_formatters,
+			typescript = js_ts_formatters,
+			typescriptreact = js_ts_formatters,
 		},
 	},
 }
