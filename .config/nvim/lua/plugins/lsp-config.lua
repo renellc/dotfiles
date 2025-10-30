@@ -29,13 +29,11 @@ return {
 			ts_ls = {},
 		}
 
-		local lspconfig = require("lspconfig")
-
 		for server_name, config in pairs(servers) do
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			config.capabilities = capabilities
 
-			lspconfig[server_name].setup(config)
+			vim.lsp.config(server_name, config)
 			vim.lsp.enable(server_name)
 		end
 	end,
