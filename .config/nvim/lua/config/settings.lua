@@ -10,4 +10,4 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 
-vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme catppuccin-macchiato")
