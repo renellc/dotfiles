@@ -8,7 +8,8 @@ return {
 	opts = {
 		bigfile = { enabled = true },
 		notifier = { enabled = true },
-		input = { enabled = true },
+		input = {},
 		scroll = { enabled = true },
+		picker = {},
 	},
 }
