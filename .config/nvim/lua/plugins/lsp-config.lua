@@ -2,6 +2,7 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function()
 		local servers = {
+			basedpyright = {},
 			cssls = {},
 			docker_compose_language_service = {},
 			emmet_language_server = {},
