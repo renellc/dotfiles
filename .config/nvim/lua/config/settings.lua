@@ -25,6 +25,5 @@ vim.opt.incsearch = true
 
 -- Other settings
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "120"
 vim.opt.showmatch = true
 
