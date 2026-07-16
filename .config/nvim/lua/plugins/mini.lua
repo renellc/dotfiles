@@ -1,4 +1,5 @@
 return {
-	{ "echasnovski/mini.pairs", version = "*", config = true },
-	{ "echasnovski/mini.indentscope", version = "*", config = true },
+	{ "nvim-mini/mini.indentscope", version = false },
+	{ "nvim-mini/mini.notify", version = false },
+	{ "nvim-mini/mini.pairs", version = false, config = true },
 }
