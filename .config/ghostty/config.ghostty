@@ -1,0 +1,28 @@
+theme = Catppuccin Mocha
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+font-family = JetBrains Mono
+font-size = 14
+font-feature = -calt
+font-feature = -clig
+font-feature = -liga
+
+# Padding (x = left+right, y = top+bottom)
+window-padding-x = 0
+window-padding-y = 8
+
+# Keybindings
+keybind = super+shift+d=new_split:down
+keybind = super+d=new_split:right
+keybind = super+w=close_surface
+
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
+
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
